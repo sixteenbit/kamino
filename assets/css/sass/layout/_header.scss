@@ -1,0 +1,37 @@
+/**
+ * Header
+ */
+.site-header {
+	.top-bar .name h1 a,
+	.top-bar .name h2 a,
+	.top-bar .name h3 a,
+	.top-bar .name h4 a,
+	.top-bar .name p a,
+	.top-bar .name span a {
+		width: auto;
+	}
+	hgroup {
+		padding: rem-calc(45 0 20);
+	}
+	.site-title {
+		font-size: rem-calc(32);
+		letter-spacing: -1px;
+		font-weight: 700;
+		line-height: 1;
+		text-decoration: none;
+		margin: 0;
+	}
+}
+
+.admin-bar .fixed {
+	top: 32px;
+	@media screen and (max-width: 782px) {
+		top: 46px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#wpadminbar {
+		position: fixed;
+	}
+}
