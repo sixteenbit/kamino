@@ -1,0 +1,10 @@
+.format-audio {
+	.wp-audio-shortcode {
+		height: rem-calc(30) !important;
+		margin: rem-calc(20 0);
+		max-width: rem-calc(663) !important;
+	}
+	audio {
+		max-width: 100% !important;
+	}
+}

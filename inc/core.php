@@ -41,6 +41,7 @@ if ( ! function_exists( 'kamino_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'featured-image', 640, 9999 );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -87,36 +88,6 @@ if ( ! function_exists( 'kamino_setup' ) ) :
 endif;
 
 add_action( 'after_setup_theme', 'kamino_setup' );
-
-/**
- * Build Top Bar
- */
-function kamino_navigation() {
-	if ( has_nav_menu( 'primary' ) ) {
-		echo wp_nav_menu( array(
-			'menu_id'        => 'primary-menu',
-			'theme_location' => 'primary',
-			'menu_class'     => 'left',
-			'walker'         => new kamino_topbar_walker(),
-			'container'      => ''
-		) );
-	} else {
-		echo '<ul class="left">';
-		echo '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '">' . esc_html( 'Add a menu', 'kamino' ) . '</a></li>';
-		echo '</ul>';
-	}
-}
-
-/**
- * Add Search to Top Bar
- */
-function topbar_search() {
-	echo '<ul class="right">' . "\n";
-	echo '<li class="has-form">' . "\n";
-	echo '' . get_search_form() . '' . "\n";
-	echo '</li>' . "\n";
-	echo '</ul>' . "\n";
-}
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -211,6 +182,9 @@ function kamino_scripts() {
 
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'kamino-fonts', kamino_fonts_url(), array(), null );
+
+	// Add Genericons, used in the main stylesheet.
+	wp_enqueue_style( 'genericons', KAMINO_TEMPLATE_URL . '/genericons/genericons.css', array(), '3.2' );
 
 	// Load our main stylesheet.
 	wp_enqueue_style( 'kamino-main', KAMINO_TEMPLATE_URL . '/assets/css/main.css', false, KAMINO_VERSION, null );

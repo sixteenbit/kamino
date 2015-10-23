@@ -1,7 +1,8 @@
 $page-navi-border: rgba(#7C7874, 0.40);
 
 .wp-pagenavi {
-	clear: both;
+	@include clearfix;
+	margin: rem-calc(30 0);
 	text-align: center;
 	.pages {
 		display: none;

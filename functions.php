@@ -28,6 +28,8 @@ if ( version_compare( $GLOBALS['wp_version'], '4.2', '<' ) ) {
 
 // Includes
 require_once KAMINO_INC . 'core.php';
+require_once KAMINO_INC . 'customizer.php';
+require_once KAMINO_INC . 'sanitization.php';
 require_once KAMINO_INC . 'custom-header.php';
 require_once KAMINO_INC . 'template-tags.php';
 require_once KAMINO_INC . 'extras.php';

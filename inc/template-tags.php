@@ -110,3 +110,33 @@ function kamino_category_transient_flusher() {
 
 add_action( 'edit_category', 'kamino_category_transient_flusher' );
 add_action( 'save_post', 'kamino_category_transient_flusher' );
+
+/**
+ * Build Top Bar
+ */
+function kamino_navigation() {
+	if ( has_nav_menu( 'primary' ) ) {
+		echo wp_nav_menu( array(
+			'menu_id'        => 'primary-menu',
+			'theme_location' => 'primary',
+			'menu_class'     => 'left',
+			'walker'         => new kamino_topbar_walker(),
+			'container'      => ''
+		) );
+	} else {
+		echo '<ul class="left">';
+		echo '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '">' . esc_html( 'Add a menu', 'kamino' ) . '</a></li>';
+		echo '</ul>';
+	}
+}
+
+/**
+ * Add Search to Top Bar
+ */
+function topbar_search() {
+	echo '<ul class="right">' . "\n";
+	echo '<li class="has-form">' . "\n";
+	echo '' . get_search_form() . '' . "\n";
+	echo '</li>' . "\n";
+	echo '</ul>' . "\n";
+}

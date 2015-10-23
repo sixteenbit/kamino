@@ -1,0 +1,23 @@
+.format-quote {
+	position: relative;
+	background-color: lighten($primary-color, 40);
+	font-size: rem-calc(20);
+	p {
+		font-size: rem-calc(24);
+		line-height: 130%;
+		font-family: $font-family-serif;
+		font-style: italic;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+	}
+	.entry-header {
+		display: none;
+	}
+	.entry-content {
+		padding: 40px;
+	}
+	blockquote {
+		border-left: none;
+		padding: 0;
+		margin: 0;
+	}
+}

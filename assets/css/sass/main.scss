@@ -86,7 +86,13 @@
 // Layout-related sections
 // -----------------------------------------------------------------------------
 @import "layout/header";
+@import "layout/navigation";
 @import "layout/content";
+@import "layout/format-audio";
+@import "layout/format-image";
+@import "layout/format-quote";
+@import "layout/format-status";
+@import "layout/format-video";
 @import "layout/widget-area";
 @import "layout/footer";
 // -----------------------------------------------------------------------------

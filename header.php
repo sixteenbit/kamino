@@ -8,7 +8,8 @@
  *
  * @package Kamino
  */
-
+$centered = get_theme_mod( 'center_branding' );
+$logo = get_theme_mod( 'site_logo' );
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -25,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kamino' ); ?></a>
 
 	<div class="contain-to-grid fixed">
-		<nav id="site-navigation" class="main-navigation top-bar" data-topbar role="navigation">
+		<nav id="site-navigation" class="main-navigation top-bar" data-options="scrolltop:false;" data-topbar role="navigation">
 			<ul class="title-area">
 				<li class="name"></li>
 				<li class="toggle-topbar toggle-icon">
@@ -34,20 +35,6 @@
 			</ul><!-- .title-area -->
 
 			<section class="top-bar-section">
-				<?php if ( has_nav_menu( 'social' ) ) : ?>
-					<?php
-					wp_nav_menu( array(
-							'theme_location' => 'social',
-							'menu_id'        => 'social-menu',
-							'menu_class'     => 'social-navigation right',
-							'link_before'    => '<span class="screen-reader-text">',
-							'link_after'     => '</span>',
-							'container'      => '',
-							'depth'          => '1'
-						)
-					); ?>
-				<?php endif; ?>
-
 				<?php topbar_search(); ?>
 
 				<?php kamino_navigation(); ?>
@@ -58,13 +45,27 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<div class="site-branding">
-				<hgroup>
-					<?php if( is_front_page() || is_archive() || 'video' == get_post_format() || 'image' == get_post_format() || '' == get_the_title() ) { ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php } else { ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php } // end if ?>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+				<hgroup<?php echo $centered ? ' class="text-center"' : ''; ?>>
+
+					<?php if ( $logo ): ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img class="site-logo" src="<?php echo esc_html( $logo ); ?>"
+							     alt="<?php bloginfo( 'name' ); ?>">
+						</a>
+						<?php else: ?>
+						<?php if ( is_front_page() || is_archive() || 'video' == get_post_format() || 'image' == get_post_format() || '' == get_the_title() ) { ?>
+							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<?php } else { ?>
+							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<?php } // end if ?>
+						<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+					<?php endif; ?>
+
+					<?php if ( get_header_image() ) : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+						</a>
+					<?php endif; // End header image check. ?>
 				</hgroup>
 			</div><!-- .site-branding -->
 		</div><!-- .container -->

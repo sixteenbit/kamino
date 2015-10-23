@@ -1,0 +1,8 @@
+.format-image {
+	max-width: 100%;
+	overflow: hidden;
+	[class*="wp-image-"] {
+		width: 100%;
+		margin: 0;
+	}
+}

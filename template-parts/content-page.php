@@ -14,6 +14,12 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
+	<?php if ( has_post_thumbnail() ) : ?>
+		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+			<?php the_post_thumbnail( 'featured-image', array( 'class' => 'aligncenter' ) ); ?>
+		</a>
+	<?php endif; ?>
+
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
