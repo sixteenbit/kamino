@@ -59,6 +59,9 @@
 		border-top: 1px solid darken($secondary-color, 5%);
 		font-size: rem-calc(12);
 	}
+	.cat-links {
+		margin-right: rem-calc(15);
+	}
 	.entry-time {
 		float: left;
 	}

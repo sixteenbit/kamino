@@ -11,6 +11,7 @@ if ( has_nav_menu( 'social' ) || is_active_sidebar( 'sidebar-1' )  ) : ?>
 
 	<div id="secondary" class="widget-area" role="complementary">
 		<?php if ( has_nav_menu( 'social' ) ) : ?>
+			<?php echo '<h3 class="widget-title">', esc_html( 'Connect', 'kamino' ), '</h3>'; ?>
 			<nav id="social-navigation" class="social-navigation" role="navigation">
 				<?php
 				// Social links navigation menu.
