@@ -2,21 +2,13 @@
  * Header
  */
 .site-header {
-	.top-bar .name h1 a,
-	.top-bar .name h2 a,
-	.top-bar .name h3 a,
-	.top-bar .name h4 a,
-	.top-bar .name p a,
-	.top-bar .name span a {
-		width: auto;
-	}
 	hgroup {
 		padding: rem-calc(45 0 20);
 	}
 	.site-title {
 		font-size: rem-calc(32);
 		letter-spacing: -1px;
-		font-weight: 700;
+		font-weight: $font-weight-bold;
 		line-height: 1;
 		text-decoration: none;
 		margin: 0;

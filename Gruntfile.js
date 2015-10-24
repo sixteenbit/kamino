@@ -140,6 +140,26 @@ module.exports = function (grunt) {
             }
         },
         /**
+         * grunt-postcss
+         *
+         * Apply several post-processors to your CSS using PostCSS
+         *
+         * @link https://www.npmjs.com/package/grunt-postcss
+         */
+        postcss: {
+            options: {
+                map: true,
+                processors: [
+                    require('pixrem')(), // add fallbacks for rem units
+                    require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+                    require('cssnano')() // minify the result
+                ]
+            },
+            dist: {
+                src: 'assets/css/*.css'
+            }
+        },
+        /**
          * grunt-cssjanus
          *
          * Grunt plugin to convert CSS stylesheets between left-to-right
@@ -363,7 +383,7 @@ module.exports = function (grunt) {
     // Register tasks
     grunt.registerTask('sync', ['browserSync', 'watch']);
 
-    grunt.registerTask('css', ['sass', 'cssjanus', 'notify:css']);
+    grunt.registerTask('css', ['sass', 'postcss', 'cssjanus', 'notify:css']);
 
     grunt.registerTask('js', ['jshint', 'concat', 'modernizr', 'uglify', 'notify:js']);
 

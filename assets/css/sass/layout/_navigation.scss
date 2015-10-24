@@ -31,12 +31,12 @@
 	}
 	a {
 		display: block;
-		height: 3.2em;
+		height: 3.2rem;
 		position: relative;
-		width: 3.2em;
+		width: 3.2rem;
 		&:before {
 			content: "\f415";
-			font-size: 24px;
+			font-size: rem-calc(24);
 			position: absolute;
 			top: 0;
 			left: 0;

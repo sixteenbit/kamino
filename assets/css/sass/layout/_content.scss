@@ -25,7 +25,7 @@
 .hentry {
 	position: relative;
 	margin: rem-calc(0 0 40 0);
-	background: #fff;
+	background: $white;
 	border-bottom: 1px solid $secondary-color;
 	border-radius: $global-radius;
 	box-shadow: 0 $global-radius darken($secondary-color, 10%);
@@ -35,7 +35,7 @@
 	}
 	.entry-header {
 		@include clearfix;
-		padding: 20px;
+		padding: rem-calc(20);
 		margin-bottom: rem-calc(15);
 		border-bottom: 1px solid darken($secondary-color, 5%);
 		.entry-meta {
@@ -49,13 +49,13 @@
 	.entry-content,
 	.entry-summary {
 		@include clearfix;
-		padding: 0 20px 20px;
+		padding: rem-calc(0 20 20);
 	}
 	.entry-footer {
 		@include clearfix;
-		padding: 15px 20px;
-		background: #fafbfb;
-		color: #888;
+		padding: rem-calc(15 20);
+		background: $snow;
+		color: $jumbo;
 		border-top: 1px solid darken($secondary-color, 5%);
 		font-size: rem-calc(12);
 	}
@@ -76,7 +76,7 @@
 }
 
 .page-header {
-	padding: 10px 0;
+	padding: rem-calc(10 0);
 	border-top: 1px solid darken($secondary-color, 10);
 	border-bottom: 1px solid darken($secondary-color, 10);
 	margin-bottom: rem-calc(20);

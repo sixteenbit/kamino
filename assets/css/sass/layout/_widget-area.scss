@@ -4,14 +4,14 @@
 }
 
 .widget {
-	margin-bottom: 30px;
+	margin-bottom: $column-gutter;
 	ul, ol {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 	}
 	li {
-		padding: 5px 0;
+		padding: rem-calc(5 0);
 	}
 	.children li:last-child {
 		padding-bottom: 0;
@@ -26,11 +26,11 @@
 }
 
 .widget-title {
-	font-size: rem-calc(18);
-	font-weight: 600;
-	border-bottom: 1px solid #ccc;
 	margin-bottom: rem-calc(10);
-	padding-bottom: 10px;
+	padding-bottom: rem-calc(10);
+	font-size: rem-calc(18);
+	font-weight: $font-weight-medium;
+	border-bottom: 1px solid $iron;
 }
 
 .search-form .search-submit {
