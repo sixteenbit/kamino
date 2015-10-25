@@ -2,32 +2,30 @@
  * Header
  */
 .site-header {
-	hgroup {
-		padding: rem-calc(45 0 20);
-	}
-	.site-title {
-		font-size: rem-calc(32);
-		letter-spacing: -1px;
-		font-weight: $font-weight-bold;
-		line-height: 1;
-		text-decoration: none;
-		margin: 0;
-	}
-}
-
-.admin-bar .fixed {
-	top: 32px;
-	@media screen and (max-width: 782px) {
-		top: 46px;
-	}
-}
-
-.fixed.expanded:not(.top-bar) .top-bar-section {
-	margin-top: 0;
+    hgroup {
+        padding: rem-calc(45 0 20);
+    }
+    .site-title {
+        font-size: rem-calc(32);
+        letter-spacing: -1px;
+        font-weight: $font-weight-bold;
+        line-height: 1;
+        text-decoration: none;
+        margin: 0;
+        a {
+			color: $primary-color;
+            @include on-event() {
+                color: $anchor-font-color-hover;
+            }
+        }
+    }
+    .site-description {
+        font-weight: $font-weight-light;
+    }
 }
 
 @media screen and (max-width: 600px) {
-	#wpadminbar {
-		position: fixed;
-	}
+    #wpadminbar {
+        position: fixed;
+    }
 }

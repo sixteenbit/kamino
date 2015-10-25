@@ -1,13 +1,13 @@
 {
   "name": "kamino",
   "title": "Kamino",
-  "description": "The best WordPress theme ever made!",
+  "description": "Kamino is a clean minimal and responsive WordPress theme. Developed using Foundation 5 that makes it mobile and tablet friendly. Kamino incorporates latest web standards such as HTML5 and CSS3 and is SEO friendly thanks to its clean structure and codebase.",
   "version": "0.1.0",
   "license": "GPL-2.0",
-  "homepage": "https://bitbucket.org/sixteenbit/kamino",
+  "homepage": "https://github.com/sixteenbit/kamino",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/sixteenbit/kamino"
+    "url": "https://github.com/sixteenbit/kamino"
   },
   "author": {
     "name": "Sixteenbit",

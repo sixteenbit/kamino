@@ -1,5 +1,5 @@
 /*! Kamino - v0.1.0
- * https://bitbucket.org/sixteenbit/kamino
+ * https://github.com/sixteenbit/kamino
  * Copyright (c) 2015; * Licensed GPLv2+ */
 !function(){"use strict";/**
 	 * @preserve FastClick: polyfill to remove click delays on browsers with touch UIs.

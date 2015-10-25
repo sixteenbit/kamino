@@ -96,6 +96,7 @@ $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 $font-family-monospace: "Source Code Pro", Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
+$font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-medium: 600;
 $font-weight-bold: 700;
@@ -121,15 +122,16 @@ $jet: #222;
 $black: #000;
 
 // We use these as default colors throughout
-$primary-color: #2a3842;
+$primary-color: #2c3e50;
 $secondary-color: #f0f5f7;
 $alert-color: #f04124;
-$success-color: #00a843;
-$warning-color: #f08a24;
+$success-color: #1abc9c;
+$warning-color: #f1c40f;
 $info-color: #a0d3e8;
+$action-color: #2980b9;
 
 // We use these to control various global styles
-$body-bg: $secondary-color;
+$body-bg: #ecf0f1;
 $body-font-color: $jet;
 $body-font-family: $font-family-sans-serif;
 $body-font-weight: $font-weight-normal;
@@ -275,7 +277,7 @@ $paragraph-text-rendering: optimizeLegibility;
 // We use these to style anchors
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
-$anchor-font-color: $primary-color;
+$anchor-font-color: $action-color;
 $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element
@@ -1435,7 +1437,7 @@ $topbar-link-bg-hover: scale-color($topbar-bg-color, $lightness: -14%);
 $topbar-dropdown-bg: $topbar-link-bg-hover;
 // $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
-// $topbar-dropdown-link-bg: $oil;
+$topbar-dropdown-link-bg: $topbar-dropdown-bg;
 // $topbar-dropdown-link-bg-hover: $jet;
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;

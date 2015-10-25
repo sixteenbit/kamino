@@ -25,7 +25,7 @@ $logo = get_theme_mod( 'site_logo' );
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kamino' ); ?></a>
 
-	<div class="contain-to-grid fixed">
+	<div class="contain-to-grid">
 		<nav id="site-navigation" class="main-navigation top-bar" data-options="scrolltop:false;" data-topbar role="navigation">
 			<ul class="title-area">
 				<li class="name"></li>
