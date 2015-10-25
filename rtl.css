@@ -5387,7 +5387,7 @@ video {
 /**
  * Header
  */
-.site-header hgroup {
+.site-header .site-branding {
   padding: 45px 0 20px;
   padding: 2.8125rem 0 1.25rem;
 }
@@ -5395,7 +5395,7 @@ video {
   font-size: 32px;
   font-size: 2rem;
   letter-spacing: -1px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   text-decoration: none;
   margin: 0;

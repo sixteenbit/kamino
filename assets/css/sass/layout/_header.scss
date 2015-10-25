@@ -2,13 +2,13 @@
  * Header
  */
 .site-header {
-    hgroup {
+    .site-branding {
         padding: rem-calc(45 0 20);
     }
     .site-title {
         font-size: rem-calc(32);
         letter-spacing: -1px;
-        font-weight: $font-weight-bold;
+        font-weight: $font-weight-medium;
         line-height: 1;
         text-decoration: none;
         margin: 0;
