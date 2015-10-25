@@ -17,8 +17,7 @@
 	@extend .medium-8;
 	@extend .columns;
 	&.full-width {
-		@extend .medium-10;
-		@extend .small-centered;
+		@extend .medium-12;
 	}
 }
 
@@ -38,6 +37,10 @@
 		padding: rem-calc(20);
 		margin-bottom: rem-calc(15);
 		border-bottom: 1px solid darken($secondary-color, 5%);
+		.post-thumbnail img {
+			@include size(75px auto);
+			border-radius: $global-radius;
+		}
 		.entry-meta {
 			font-size: rem-calc(12);
 		}
@@ -49,11 +52,11 @@
 	.entry-content,
 	.entry-summary {
 		@include clearfix;
-		padding: rem-calc(0 20 20);
+		padding: rem-calc(0 15 0);
 	}
 	.entry-footer {
 		@include clearfix;
-		padding: rem-calc(15 20);
+		padding: rem-calc(15);
 		background: $snow;
 		color: $jumbo;
 		border-top: 1px solid darken($secondary-color, 5%);

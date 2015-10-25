@@ -1,0 +1,21 @@
+.format-link {
+	.entry-header {
+		margin-bottom: 0;
+		border-bottom: 0;
+		border-top-right-radius: $global-radius;
+		border-top-left-radius: $global-radius;
+		@include linear-gradient(top, $charcoal 0%, $jet 100%);
+		.entry-content {
+			padding: 0;
+		}
+		a {
+			color: $secondary-color;
+			@include on-event() {
+				color: $secondary-button-bg-hover;
+			}
+		}
+	}
+	.entry-title {
+		margin-bottom: 0;
+	}
+}

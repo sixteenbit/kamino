@@ -17,9 +17,11 @@
 			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 		<?php } else { ?>
 			<?php if ( has_post_thumbnail() ) : ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft th' ) ); ?>
-				</a>
+				<div class="post-thumbnail">
+					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+						<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) ); ?>
+					</a>
+				</div>
 			<?php endif; ?>
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		<?php } // end if ?>

@@ -140,3 +140,21 @@ function topbar_search() {
 	echo '</li>' . "\n";
 	echo '</ul>' . "\n";
 }
+
+if ( ! function_exists( 'kamino_get_link_url' ) ) :
+	/**
+	 * Return the post URL.
+	 *
+	 * Falls back to the post permalink if no URL is found in the post.
+	 *
+	 *
+	 * @see get_url_in_content()
+	 *
+	 * @return string The Link format URL.
+	 */
+	function kamino_get_link_url() {
+		$has_url = get_url_in_content( get_the_content() );
+
+		return $has_url ? $has_url : apply_filters( 'the_permalink', get_permalink() );
+	}
+endif;

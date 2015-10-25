@@ -13,12 +13,21 @@
  * Layout
  * 		Header
  *		Content
+ *		Widget Area
  *		Footer
+ * Formats
+ *		Audio
+ *		Image
+ *		Link
+ *		Quote
+ *		Status
+ *		Video
  * Components
  *		Accessibility
  *		Buttons
  *		Galleries
  *		Captions
+ *		Comments
  *		PageNavi
  */
 // -----------------------------------------------------------------------------
@@ -36,31 +45,31 @@
 // -----------------------------------------------------------------------------
 // Import all Foundation components
 // -----------------------------------------------------------------------------
-@import "foundation";
+//@import "foundation";
 // -----------------------------------------------------------------------------
 // Behold, here are all the Foundation components.
 // -----------------------------------------------------------------------------
-//@import "foundation/components/grid";
-//@import "foundation/components/accordion";
+@import "foundation/components/grid";
+@import "foundation/components/accordion";
 //@import "foundation/components/alert-boxes";
-//@import "foundation/components/block-grid";
-//@import "foundation/components/breadcrumbs";
+@import "foundation/components/block-grid";
+@import "foundation/components/breadcrumbs";
 //@import "foundation/components/button-groups";
-//@import "foundation/components/buttons";
+@import "foundation/components/buttons";
 //@import "foundation/components/clearing";
 //@import "foundation/components/dropdown";
 //@import "foundation/components/dropdown-buttons";
-//@import "foundation/components/flex-video";
-//@import "foundation/components/forms";
+@import "foundation/components/flex-video";
+@import "foundation/components/forms";
 //@import "foundation/components/icon-bar";
-//@import "foundation/components/inline-lists";
+@import "foundation/components/inline-lists";
 //@import "foundation/components/joyride";
-//@import "foundation/components/keystrokes";
-//@import "foundation/components/labels";
+@import "foundation/components/keystrokes";
+@import "foundation/components/labels";
 //@import "foundation/components/magellan";
 //@import "foundation/components/orbit";
-//@import "foundation/components/pagination";
-//@import "foundation/components/panels";
+@import "foundation/components/pagination";
+@import "foundation/components/panels";
 //@import "foundation/components/pricing-tables";
 //@import "foundation/components/progress-bars";
 //@import "foundation/components/range-slider";
@@ -69,14 +78,14 @@
 //@import "foundation/components/split-buttons";
 //@import "foundation/components/sub-nav";
 //@import "foundation/components/switches";
-//@import "foundation/components/tables";
+@import "foundation/components/tables";
 //@import "foundation/components/tabs";
 //@import "foundation/components/thumbs";
 //@import "foundation/components/tooltips";
-//@import "foundation/components/top-bar";
-//@import "foundation/components/type";
+@import "foundation/components/top-bar";
+@import "foundation/components/type";
 //@import "foundation/components/offcanvas";
-//@import "foundation/components/visibility";
+@import "foundation/components/visibility";
 // -----------------------------------------------------------------------------
 // Base
 // -----------------------------------------------------------------------------
@@ -88,13 +97,17 @@
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/content";
+@import "layout/widget-area";
+@import "layout/footer";
+// -----------------------------------------------------------------------------
+// Formats
+// -----------------------------------------------------------------------------
 @import "layout/format-audio";
 @import "layout/format-image";
+@import "layout/format-link";
 @import "layout/format-quote";
 @import "layout/format-status";
 @import "layout/format-video";
-@import "layout/widget-area";
-@import "layout/footer";
 // -----------------------------------------------------------------------------
 // Components
 // -----------------------------------------------------------------------------
@@ -102,4 +115,5 @@
 @import "components/buttons";
 @import "components/galleries";
 @import "components/captions";
+@import "components/comments";
 @import "components/wp-pagenavi";

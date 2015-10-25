@@ -2,12 +2,8 @@
 	.entry-header {
 		margin-bottom: 0;
 	}
-	.entry-content {
-		margin-top: 0;
-	}
-	.video-container {
-		@include flex-video-container();
-		margin-left: -20px;
-		margin-right: -20px;
+	.flex-video {
+		margin-left: rem-calc(-15);
+		margin-right: rem-calc(-15);
 	}
 }

@@ -18,9 +18,11 @@
 		<?php edit_post_link( __( 'Edit', 'kamino' ), '<span class="edit-link">', '</span>' ); ?>
 
 		<?php if ( has_post_thumbnail() ) : ?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-				<?php the_post_thumbnail('thumbnail', array('class' => 'alignleft th')); ?>
-			</a>
+			<div class="post-thumbnail">
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) ); ?>
+				</a>
+			</div>
 		<?php endif; ?>
 
 		<?php if ( is_single() || is_page() ) { ?>

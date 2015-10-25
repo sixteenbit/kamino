@@ -1,6 +1,6 @@
 /*!
  * modernizr v3.1.0
- * Build http://modernizr.com/download?-animation-checked-contains-csstransforms-csstransitions-input-placeholder-progressbar_meter-search-target-template-addtest-fnbind-printshiv-testprop-dontmin
+ * Build http://modernizr.com/download?-animation-checked-contains-csstransitions-input-placeholder-search-target-template-addtest-fnbind-printshiv-testprop-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -1791,23 +1791,6 @@ Tests for placeholder attribute in inputs and textareas
 
   Modernizr.addTest('template', 'content' in createElement('template'));
 
-/*!
-{
-  "name": "progress Element",
-  "caniuse": "progressmeter",
-  "property": ["progressbar", "meter"],
-  "tags": ["elem"],
-  "builderAliases": ["elem_progress_meter"],
-  "authors": ["Stefan Wallin"]
-}
-!*/
-
-  // Tests for progressbar-support. All browsers that don't support progressbar returns undefined =)
-  Modernizr.addTest('progressbar', createElement('progress').max !== undefined);
-
-  // Tests for meter-support. All browsers that don't support meters returns undefined =)
-  Modernizr.addTest('meter', createElement('meter').max !== undefined);
-
 
   /**
    * Modernizr.hasEvent() detects support for a given event
@@ -1922,22 +1905,6 @@ Detects support for the Web Animation API, a way to create css animations in js
 */
 
   Modernizr.addTest('webanimations', 'animate' in createElement('div'));
-
-/*!
-{
-  "name": "CSS Transforms",
-  "property": "csstransforms",
-  "caniuse": "transforms2d",
-  "tags": ["css"]
-}
-!*/
-
-  Modernizr.addTest('csstransforms', function() {
-    // Android < 3.0 is buggy, so we sniff and blacklist
-    // http://git.io/hHzL7w
-    return navigator.userAgent.indexOf('Android 2.') === -1 &&
-           testAllProps('transform', 'scale(1)', true);
-  });
 
 
   // Run each test
