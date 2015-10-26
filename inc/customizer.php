@@ -41,7 +41,6 @@ function kamino_register_customizer_settings( $wp_customize ) {
 		)
 	);
 
-
 	/**
 	 * Center Branding setting.
 	 *
@@ -63,6 +62,30 @@ function kamino_register_customizer_settings( $wp_customize ) {
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'sanitize_callback' => 'kamino_sanitize_checkbox'
+		)
+	);
+
+	/**
+	 * Footer Copyright Text setting example.
+	 *
+	 * - Setting: Footer Copyright Text
+	 * - Control: text
+	 * - Sanitization: html
+	 *
+	 * Uses a text field to configure the user's copyright text displayed in the site footer.
+	 *
+	 * @uses $wp_customize->add_setting() https://developer.wordpress.org/reference/classes/wp_customize_manager/add_setting/
+	 * @link $wp_customize->add_setting() https://codex.wordpress.org/Class_Reference/WP_Customize_Manager/add_setting
+	 */
+	$wp_customize->add_setting(
+	// $id
+		'footer_copyright_text',
+		// $args
+		array(
+			'default'           => sprintf( __( '&copy; %s. All rights reserved.', 'kamino' ), date( 'Y' ) . ' ' . esc_html( get_bloginfo( 'name' ) ) ),
+			'type'              => 'theme_mod',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'kamino_sanitize_html'
 		)
 	);
 }
@@ -142,6 +165,32 @@ function kamino_register_customizer_controls( $wp_customize ) {
 			'type'     => 'checkbox',
 			'label'    => __( 'Center Site Branding', 'kamino' ),
 			'priority' => '80'
+		)
+	);
+
+	/**
+	 * Basic Text control.
+	 *
+	 * - Control: Basic: Text
+	 * - Setting: Footer Copyright Text
+	 * - Sanitization: html
+	 *
+	 * Register the core "text" control to be used to configure the Footer Copyright Text setting.
+	 *
+	 * @uses $wp_customize->add_control() https://developer.wordpress.org/reference/classes/wp_customize_manager/add_control/
+	 * @link $wp_customize->add_control() https://codex.wordpress.org/Class_Reference/WP_Customize_Manager/add_control
+	 */
+	$wp_customize->add_control(
+	// $id
+		'footer_copyright_text',
+		// $args
+		array(
+			'settings'    => 'footer_copyright_text',
+			'section'     => 'title_tagline',
+			'type'        => 'text',
+			'label'       => __( 'Footer Copyright Text', 'kamino' ),
+			'description' => __( 'Copyright or other text to be displayed in the site footer. HTML allowed.', 'kamino' ),
+			'priority'    => '90'
 		)
 	);
 

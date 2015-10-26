@@ -8,14 +8,14 @@
  *
  * @package Kamino
  */
-
+$footer_text = get_theme_mod( 'footer_copyright_text' );
 ?>
 
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php echo '&copy; ', date( 'Y' ); echo ' '; bloginfo( 'name' ); echo ' All Rights Reserved.'; ?>
+			<?php echo esc_html( $footer_text ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
