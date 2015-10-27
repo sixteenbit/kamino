@@ -1,3 +1,4 @@
 input[type="submit"] {
-	@include button;
+    @extend .button;
+	border-radius: $global-radius;
 }

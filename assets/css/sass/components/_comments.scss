@@ -1,9 +1,6 @@
 .comments-area {
 	padding: rem-calc(40 15);
 	background: $white;
-	border-bottom: 1px solid $secondary-color;
-	border-radius: $global-radius;
-	box-shadow: 0 $global-radius darken($secondary-color, 10%);
 	& > :last-child {
 		margin-bottom: 0;
 	}
