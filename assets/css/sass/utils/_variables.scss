@@ -1434,7 +1434,7 @@ $topbar-link-bg-hover: scale-color($topbar-bg-color, $lightness: -14%);
 // $topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: $topbar-link-bg-hover;
+$topbar-dropdown-bg: $topbar-bg-color;
 // $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
 $topbar-dropdown-link-bg: $topbar-dropdown-bg;

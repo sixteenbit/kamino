@@ -2,30 +2,30 @@
  * Header
  */
 .site-header {
-    .site-branding {
-        padding: rem-calc(45 0 20);
-    }
-    .site-title {
-        font-size: rem-calc(32);
-        letter-spacing: -1px;
-        font-weight: $font-weight-medium;
-        line-height: 1;
-        text-decoration: none;
-        margin: 0;
-        a {
+	.site-branding {
+		padding: rem-calc(45 0 20);
+	}
+	.site-title {
+		font-size: rem-calc(32);
+		letter-spacing: -1px;
+		font-weight: $font-weight-medium;
+		line-height: 1;
+		text-decoration: none;
+		margin: 0;
+		a {
 			color: $primary-color;
-            @include on-event() {
-                color: $anchor-font-color-hover;
-            }
-        }
-    }
-    .site-description {
-        font-weight: $font-weight-light;
-    }
+			@include on-event() {
+				color: $anchor-font-color-hover;
+			}
+		}
+	}
+	.site-description {
+		font-weight: $font-weight-light;
+	}
 }
 
 @media screen and (max-width: 600px) {
-    #wpadminbar {
-        position: fixed;
-    }
+	#wpadminbar {
+		position: fixed;
+	}
 }

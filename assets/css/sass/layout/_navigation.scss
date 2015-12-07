@@ -114,3 +114,9 @@
 		content: "\f220";
 	}
 }
+
+@media #{$medium-up} {
+	.top-bar-section .dropdown li a {
+		line-height: rem-calc(14);
+	}
+}
